@@ -1,0 +1,2 @@
+import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                      */import{f as s}from"./assets/vendor-992cd48f.js";let t;const u={enableTime:!0,time_24hr:!0,defaultDate:new Date,minuteIncrement:1,onClose(o){console.log(o[0]),t=o[0]}};s("#datetime-picker",u);console.log(t);function a(o){const e=Math.floor(o/864e5),n=Math.floor(o%864e5/36e5),r=Math.floor(o%864e5%36e5/6e4),c=Math.floor(o%864e5%36e5%6e4/1e3);return{days:e,hours:n,minutes:r,seconds:c}}console.log(a(2e3));
+//# sourceMappingURL=commonHelpers.js.map
