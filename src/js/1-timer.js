@@ -6,14 +6,17 @@ import izitoast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 let userSelectedDate;
-let intervalId = null;
-let timerDays;
 const buttonStart = document.querySelector('[data-start]');
 const options = {
   enableTime: true,
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
+  onOpen: function dayNames() {
+    document.querySelectorAll('.flatpickr-weekday').forEach(el => {
+      el.textContent = el.textContent.trim().slice(0, 2);
+    });
+  },
   onClose(selectedDates) {
     console.log(selectedDates[0]);
     userSelectedDate = selectedDates[0].getTime();
@@ -22,9 +25,11 @@ const options = {
         title: 'Error',
         message: 'Please choose a date in the future',
         position: 'topRight',
+
         backgroundColor: '#EF4040',
         titleColor: '#fff',
         messageColor: '#fff',
+        messageSize: '16px',
         progressBarColor: '#B51B1B',
       });
       buttonStart.disabled = true;

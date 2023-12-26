@@ -116,6 +116,23 @@ a {
   border: 1px solid #808080;
   padding: 16px;
 }
+.flatpickr-calendar {
+  color: #666666;
+}
+
+.flatpickr-day {
+  color: #666666;
+}
+.flatpickr-day:hover,
+.flatpickr-day:focus {
+  background-color: #c1c1c1;
+}
+
+.dayContainer > .flatpickr-day.today {
+  background-color: transparent;
+  color: #666666;
+  border-color: #4e75ff;
+}
 .timer {
   display: flex;
   gap: 24px;
