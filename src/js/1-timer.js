@@ -20,18 +20,19 @@ const options = {
         title: 'Error',
         message: 'Please choose a date in the future',
         position: 'topRight',
+        backgroundColor: '#EF4040',
+        titleColor: '#fff',
+        messageColor: '#fff',
       });
       buttonStart.disabled = true;
+      buttonStart.classList.remove('button-enabled');
     } else {
       buttonStart.disabled = false;
+      buttonStart.classList.add('button-enabled');
     }
   },
 };
 const dateTimeInput = flatpickr('#datetime-picker', options);
-
-// =========================Button Start disabled=========================
-
-buttonStart.disabled = true;
 
 function convertMs(ms) {
   // Number of milliseconds per unit of time
@@ -71,5 +72,8 @@ buttonStart.addEventListener('click', () =>
     document.querySelector('[data-seconds]').textContent = seconds
       .toString()
       .padStart(2, '0');
+    if (days && hours && minutes && seconds === 0) {
+      clearInterval;
+    }
   }, 1000)
 );
