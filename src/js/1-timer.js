@@ -1,13 +1,12 @@
-// Описаний в документації
 import flatpickr from 'flatpickr';
-// Додатковий імпорт стилів
+
 import 'flatpickr/dist/flatpickr.min.css';
 
 import izitoast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 let userSelectedDate;
-
+const buttonStart = document.querySelector('[data-start]');
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -15,12 +14,25 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     console.log(selectedDates[0]);
-    userSelectedDate = selectedDates[0];
+    userSelectedDate = selectedDates[0].getTime();
+    if (userSelectedDate < Date.now()) {
+      izitoast.error({
+        title: 'Error',
+        message: 'Please choose a date in the future',
+        position: 'topRight',
+      });
+      buttonStart.disabled = true;
+    } else {
+      buttonStart.disabled = false;
+    }
   },
 };
-flatpickr('#datetime-picker', options);
+const dateTimeInput = flatpickr('#datetime-picker', options);
 
-console.log(userSelectedDate);
+// =========================Button Start disabled=========================
+
+buttonStart.disabled = true;
+
 function convertMs(ms) {
   // Number of milliseconds per unit of time
   const second = 1000;
@@ -40,4 +52,24 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-console.log(convertMs(2000));
+buttonStart.addEventListener('click', () =>
+  setInterval(() => {
+    const currentTime = Date.now();
+    const deltaTime = userSelectedDate - currentTime;
+    const time = convertMs(deltaTime);
+    const { days, hours, minutes, seconds } = time;
+
+    document.querySelector('[data-days').textContent = days
+      .toString()
+      .padStart(2, '0');
+    document.querySelector('[data-hours]').textContent = hours
+      .toString()
+      .padStart(2, '0');
+    document.querySelector('[data-minutes]').textContent = minutes
+      .toString()
+      .padStart(2, '0');
+    document.querySelector('[data-seconds]').textContent = seconds
+      .toString()
+      .padStart(2, '0');
+  }, 1000)
+);
