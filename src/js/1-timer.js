@@ -25,6 +25,7 @@ const options = {
         backgroundColor: '#EF4040',
         titleColor: '#fff',
         messageColor: '#fff',
+        progressBarColor: '#B51B1B',
       });
       buttonStart.disabled = true;
       buttonStart.classList.remove('button-enabled');
