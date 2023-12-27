@@ -109,15 +109,14 @@ a {
 }
 
 div.flatpickr-calendar {
-  width: 280px;
-
+  width: fit-content;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #808080;
-  /* padding: 16px; */
   font-size: 16px;
   color: #666666;
+  padding: 16px;
 }
 .flatpickr-calendar {
   color: #666666;
@@ -127,6 +126,7 @@ div.flatpickr-calendar {
 .numInputWrapper > .numInput.cur-year {
   font-size: 16px;
   font-weight: 600;
+  padding-bottom: 24px;
 }
 .flatpickr-weekdaycontainer > span.flatpickr-weekday {
   font-size: 16px;
@@ -136,6 +136,8 @@ div.flatpickr-calendar {
 
 .flatpickr-day {
   color: #666666;
+  width: 32px;
+  height: 32px;
 }
 .flatpickr-day:hover,
 .flatpickr-day:focus {

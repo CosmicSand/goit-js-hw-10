@@ -1,7 +1,5 @@
 import flatpickr from 'flatpickr';
-
 import 'flatpickr/dist/flatpickr.min.css';
-
 import izitoast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
@@ -19,6 +17,23 @@ const options = {
     document.querySelectorAll('.flatpickr-weekday').forEach(el => {
       el.textContent = el.textContent.trim().slice(0, 2);
     });
+    // document.querySelector('div.flatpickr-calendar').style.width = '280px';
+    // document.querySelector('div.flatpickr-calendar').style.padding = '16px';
+    // document.querySelector('div.flatpickr-weekdays').style.width = '248px';
+    // document.querySelector('div.flatpickr-rContainer').style.display = 'flex';
+    // document.querySelector('div.flatpickr-rContainer').style.width = '248px';
+    // document.querySelector('div.flatpickr-rContainer').style.flexDirection =
+    //   'column';
+    // document.querySelector('div.flatpickr-rContainer').style.marginTop = '24px';
+    // document.querySelector('div.flatpickr-rContainer').style.gap = '16px';
+    // document.querySelector('div.flatpickr-days').style.display = 'flex';
+    // document.querySelector('div.flatpickr-days').style.width = '248px';
+    // document.querySelector('div.dayContainer').style.display = 'flex';
+    // document.querySelector('div.dayContainer').style.width = '248px';
+    // document.querySelector('div.dayContainer').style.minWidth = '248px';
+
+    // document.querySelector('div.flatpickr-day').style.width = '20px';
+    // document.querySelector('div.flatpickr-day').style.height = '20px';
   },
   onClose(selectedDates) {
     console.log(selectedDates[0]);
