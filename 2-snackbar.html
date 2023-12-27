@@ -21,9 +21,10 @@ https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css
       rel="stylesheet"
     />
     
-    <script type="module" crossorigin src="/goit-js-hw-10/commonHelpers2.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-ec808ebb.js">
-    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-8974ac4d.css">
+    <script type="module" crossorigin src="/goit-js-hw-10/assets/modulepreload-polyfill-ec808ebb.js"></script>
+    <script type="module" crossorigin src="/goit-js-hw-10/assets/vendor-3029c4a4.js"></script>
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/vendor-80d0dc0f.css">
+    <link rel="stylesheet" href="/goit-js-hw-10/assets/styles-58edd82a.css">
   </head>
   <body>
     <section>
@@ -31,7 +32,7 @@ https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css
       <form class="form">
         <label>
           Delay (ms)
-          <input type="number" name="delay" required />
+          <input class="delay" type="number" name="delay" required />
         </label>
 
         <fieldset>
@@ -46,7 +47,7 @@ https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css
           </label>
         </fieldset>
 
-        <button type="submit">Create notification</button>
+        <button class="create-btn" type="submit">Create notification</button>
       </form>
     </section>
     
