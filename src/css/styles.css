@@ -4,6 +4,9 @@
   | default @import url()
   |============================
 */
+@import './1-timer.css';
+@import './2-snackbar.css';
+
 * {
   box-sizing: border-box;
 }
