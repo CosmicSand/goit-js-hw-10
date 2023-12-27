@@ -138,6 +138,7 @@ div.flatpickr-calendar {
   color: #666666;
   width: 32px;
   height: 32px;
+  border-radius: 50%;
 }
 .flatpickr-day:hover,
 .flatpickr-day:focus {

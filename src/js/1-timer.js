@@ -13,7 +13,7 @@ const options = {
   locale: {
     firstDayOfWeek: 1,
   },
-  onOpen: function dayNames() {
+  onOpen: function daysNames() {
     document.querySelectorAll('.flatpickr-weekday').forEach(el => {
       el.textContent = el.textContent.trim().slice(0, 2);
     });
@@ -26,7 +26,6 @@ const options = {
         title: 'Error',
         message: 'Please choose a date in the future',
         position: 'topRight',
-
         backgroundColor: '#EF4040',
         titleColor: '#fff',
         messageColor: '#fff',
