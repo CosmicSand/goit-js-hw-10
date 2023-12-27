@@ -61,28 +61,28 @@ function convertMs(ms) {
   return { days, hours, minutes, seconds };
 }
 
-buttonStart.addEventListener(
-  'click',
-  () =>
-    (intervalId = setInterval(() => {
-      const currentTime = Date.now();
-      const deltaTime = userSelectedDate - currentTime;
-      const time = convertMs(deltaTime);
-      const { days, hours, minutes, seconds } = time;
+buttonStart.addEventListener('click', () => {
+  buttonStart.setAttribute('disabled', true);
+  buttonStart.classList.remove('button-enabled');
+  intervalId = setInterval(() => {
+    const currentTime = Date.now();
+    const deltaTime = userSelectedDate - currentTime;
+    const time = convertMs(deltaTime);
+    const { days, hours, minutes, seconds } = time;
 
-      if (days >= 0 || hours >= 0 || minutes >= 0 || seconds >= 0) {
-        document.querySelector('[data-days').textContent = days
-          .toString()
-          .padStart(2, '0');
-        document.querySelector('[data-hours]').textContent = hours
-          .toString()
-          .padStart(2, '0');
-        document.querySelector('[data-minutes]').textContent = minutes
-          .toString()
-          .padStart(2, '0');
-        document.querySelector('[data-seconds]').textContent = seconds
-          .toString()
-          .padStart(2, '0');
-      }
-    }, 1000))
-);
+    if (days >= 0 || hours >= 0 || minutes >= 0 || seconds >= 0) {
+      document.querySelector('[data-days').textContent = days
+        .toString()
+        .padStart(2, '0');
+      document.querySelector('[data-hours]').textContent = hours
+        .toString()
+        .padStart(2, '0');
+      document.querySelector('[data-minutes]').textContent = minutes
+        .toString()
+        .padStart(2, '0');
+      document.querySelector('[data-seconds]').textContent = seconds
+        .toString()
+        .padStart(2, '0');
+    }
+  }, 1000);
+});
