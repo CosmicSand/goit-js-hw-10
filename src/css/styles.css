@@ -115,7 +115,7 @@ div.flatpickr-calendar {
   border: 1px solid #808080;
   font-size: 16px;
   color: #666666;
-  padding: 16px;
+  padding-top: 8px;
 }
 .flatpickr-calendar {
   color: #666666;
@@ -125,7 +125,6 @@ div.flatpickr-calendar {
 .numInputWrapper > .numInput.cur-year {
   font-size: 16px;
   font-weight: 600;
-  padding-bottom: 24px;
 }
 .flatpickr-weekdaycontainer > span.flatpickr-weekday {
   font-size: 16px;
@@ -135,9 +134,6 @@ div.flatpickr-calendar {
 
 .flatpickr-day {
   color: #666666;
-  /* width: 32px;
-  height: 32px;
-  border-radius: 50%; */
 }
 .flatpickr-day:hover,
 .flatpickr-day:focus {
