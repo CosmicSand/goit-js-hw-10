@@ -35,6 +35,8 @@ fieldset {
   gap: 48px;
   width: 360px;
   justify-content: center;
+  border-radius: 4px;
+  border: 1px solid #808080;
 }
 
 .create-btn {
