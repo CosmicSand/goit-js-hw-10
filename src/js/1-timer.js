@@ -32,10 +32,10 @@ const options = {
         messageSize: '16px',
         progressBarColor: '#B51B1B',
       });
-      buttonStart.disabled = true;
+      buttonStart.setAttribute('disabled', true);
       buttonStart.classList.remove('button-enabled');
     } else {
-      buttonStart.disabled = false;
+      buttonStart.removeAttribute('disabled');
       buttonStart.classList.add('button-enabled');
     }
   },
