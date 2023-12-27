@@ -12,6 +12,9 @@ const options = {
   time_24hr: true,
   defaultDate: new Date(),
   minuteIncrement: 1,
+  locale: {
+    firstDayOfWeek: 1,
+  },
   onOpen: function dayNames() {
     document.querySelectorAll('.flatpickr-weekday').forEach(el => {
       el.textContent = el.textContent.trim().slice(0, 2);
