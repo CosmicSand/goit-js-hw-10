@@ -33,12 +33,12 @@ createBtn.addEventListener('click', event => {
       title: 'Error',
       message: 'Please choose a state!',
       position: 'topRight',
-      iconUrl: `./assets/error.png`,
       backgroundColor: '#EF4040',
       titleColor: '#fff',
       messageColor: '#fff',
       messageSize: '16px',
       progressBarColor: '#FFBEBE',
+      close: false,
     });
     return;
   }
