@@ -57,14 +57,14 @@ createBtn.addEventListener('click', event => {
     .then(delay => {
       setTimeout(() => {
         izitoast.success({
-          title: 'Success',
+          title: 'OK',
           message: `Fulfilled promise in ${delay}ms`,
           position: 'topRight',
-          backgroundColor: '#1F8A0F',
+          backgroundColor: '#59A10D',
           titleColor: '#fff',
           messageColor: '#fff',
           messageSize: '16px',
-          progressBarColor: '#0B4D0B',
+          progressBarColor: '#B5EA7C',
         });
       }, delay);
     })
@@ -78,7 +78,7 @@ createBtn.addEventListener('click', event => {
           titleColor: '#fff',
           messageColor: '#fff',
           messageSize: '16px',
-          progressBarColor: '#B51B1B',
+          progressBarColor: '#FFBEBE',
         });
       }, delay);
     });
