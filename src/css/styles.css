@@ -83,3 +83,11 @@ a {
   text-decoration: none;
   color: inherit;
 }
+.fontAwesomeOpacity {
+  opacity: 1 !important;
+}
+
+.iziToast > .iziToast-body .iziToast-icon {
+  top: 30%;
+  opacity: 1;
+}

@@ -29,6 +29,7 @@ const options = {
         title: 'Error',
         message: 'Please choose a date in the future',
         position: 'topRight',
+        iconUrl: `./img/svg/error.png`,
         backgroundColor: '#EF4040',
         titleColor: '#fff',
         messageColor: '#fff',
