@@ -18,10 +18,13 @@ const options = {
       el.textContent = el.textContent.trim().slice(0, 2);
     });
   },
-  onClose(selectedDates) {
+  onClose: function (selectedDates) {
     console.log(selectedDates[0]);
     userSelectedDate = selectedDates[0].getTime();
-    if (userSelectedDate < Date.now()) {
+    if (userSelectedDate >= Date.now()) {
+      buttonStart.removeAttribute('disabled');
+      buttonStart.classList.add('button-enabled');
+    } else {
       izitoast.error({
         title: 'Error',
         message: 'Please choose a date in the future',
@@ -34,9 +37,6 @@ const options = {
       });
       buttonStart.setAttribute('disabled', true);
       buttonStart.classList.remove('button-enabled');
-    } else {
-      buttonStart.removeAttribute('disabled');
-      buttonStart.classList.add('button-enabled');
     }
   },
 };
@@ -64,7 +64,7 @@ function convertMs(ms) {
 buttonStart.addEventListener('click', () => {
   buttonStart.setAttribute('disabled', true);
   buttonStart.classList.remove('button-enabled');
-  intervalId = setInterval(() => {
+  setInterval(() => {
     const currentTime = Date.now();
     const deltaTime = userSelectedDate - currentTime;
     const time = convertMs(deltaTime);
