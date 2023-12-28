@@ -1,3 +1,9 @@
+.container {
+  /* max-width: 1128px; */
+  width: fit-content;
+  margin: 0 auto;
+  padding: 24px 0;
+}
 #datetime-picker {
   width: 270px;
   height: 40px;

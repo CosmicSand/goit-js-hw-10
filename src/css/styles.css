@@ -82,9 +82,3 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
-.container {
-  max-width: 1128px;
-  margin: 0 auto;
-  padding: 24px 0;
-}
