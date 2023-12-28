@@ -53,6 +53,9 @@ input {
   margin: 0;
   border: none;
 }
+button {
+  cursor: pointer;
+}
 input + button {
   border-radius: 8px;
   border: none;
@@ -67,10 +70,8 @@ input + button {
 }
 
 .button-enabled {
-  cursor: pointer;
   background-color: #4e75ff;
   color: #fff;
-
   transition: background-color 0.2s ease-in-out;
 }
 .button-enabled:hover,
