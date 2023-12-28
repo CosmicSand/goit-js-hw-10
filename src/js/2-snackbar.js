@@ -33,7 +33,7 @@ createBtn.addEventListener('click', event => {
       title: 'Error',
       message: 'Please choose a state!',
       position: 'topRight',
-      iconUrl: `../img/svg/error.png`,
+      iconUrl: `./assets/error.png`,
       backgroundColor: '#EF4040',
       titleColor: '#fff',
       messageColor: '#fff',
