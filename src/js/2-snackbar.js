@@ -50,6 +50,9 @@ createBtn.addEventListener('click', event => {
       reject(delay);
     }
   });
+
+  // ==================== Виконання проміса ====================
+
   promise
     .then(delay => {
       setTimeout(() => {
