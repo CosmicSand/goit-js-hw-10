@@ -20,7 +20,7 @@ createBtn.addEventListener('click', event => {
       titleColor: '#fff',
       messageColor: '#fff',
       messageSize: '16px',
-      progressBarColor: '#B51B1B',
+      progressBarColor: '#FFBEBE',
     });
     return;
   }
@@ -36,7 +36,7 @@ createBtn.addEventListener('click', event => {
       titleColor: '#fff',
       messageColor: '#fff',
       messageSize: '16px',
-      progressBarColor: '#B51B1B',
+      progressBarColor: '#FFBEBE',
     });
     return;
   }
