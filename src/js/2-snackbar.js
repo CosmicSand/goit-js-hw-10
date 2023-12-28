@@ -16,7 +16,7 @@ createBtn.addEventListener('click', event => {
       title: 'Error',
       message: 'Please enter a delay!',
       position: 'topRight',
-      iconUrl: `./img/svg/error.png`,
+      iconUrl: `../img/svg/error.png`,
       backgroundColor: '#EF4040',
       titleColor: '#fff',
       messageColor: '#fff',
