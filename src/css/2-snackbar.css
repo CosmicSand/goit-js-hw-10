@@ -34,6 +34,7 @@ fieldset {
   display: flex;
   gap: 48px;
   width: 360px;
+  height: 64px;
   justify-content: center;
   border-radius: 4px;
   border: 1px solid #808080;
@@ -55,12 +56,4 @@ fieldset {
 .create-btn:hover,
 .create-btn:focus {
   background-color: #6c8cff;
-}
-.fontAwesomeOpacity {
-  opacity: 1 !important;
-}
-
-.iziToast > .iziToast-body .iziToast-icon {
-  top: 30%;
-  opacity: 1;
 }
