@@ -56,3 +56,11 @@ fieldset {
 .create-btn:focus {
   background-color: #6c8cff;
 }
+.fontAwesomeOpacity {
+  opacity: 1 !important;
+}
+
+.iziToast > .iziToast-body .iziToast-icon {
+  top: 30%;
+  opacity: 1;
+}
