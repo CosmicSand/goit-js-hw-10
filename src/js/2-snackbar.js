@@ -1,5 +1,7 @@
 import izitoast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import errorIcon from '../img/svg/error.png';
+import successIcon from '../img/svg/circle.png';
 
 const delayInput = document.querySelector('.delay');
 const createBtn = document.querySelector('.create-btn');
@@ -16,6 +18,7 @@ createBtn.addEventListener('click', event => {
       title: 'Error',
       message: 'Please enter a delay!',
       position: 'topRight',
+      iconUrl: `${errorIcon}`,
       backgroundColor: '#EF4040',
       titleColor: '#fff',
       messageColor: '#fff',
@@ -32,6 +35,7 @@ createBtn.addEventListener('click', event => {
       title: 'Error',
       message: 'Please choose a state!',
       position: 'topRight',
+      iconUrl: `${errorIcon}`,
       backgroundColor: '#EF4040',
       titleColor: '#fff',
       messageColor: '#fff',
@@ -61,6 +65,7 @@ createBtn.addEventListener('click', event => {
           title: 'OK',
           message: `Fulfilled promise in ${delay}ms`,
           position: 'topRight',
+          iconUrl: `${successIcon}`,
           backgroundColor: '#59A10D',
           titleColor: '#fff',
           messageColor: '#fff',
@@ -75,6 +80,7 @@ createBtn.addEventListener('click', event => {
           title: 'Error',
           message: `Rejected promise in ${delay}ms`,
           position: 'topRight',
+          iconUrl: `${errorIcon}`,
           backgroundColor: '#EF4040',
           titleColor: '#fff',
           messageColor: '#fff',
