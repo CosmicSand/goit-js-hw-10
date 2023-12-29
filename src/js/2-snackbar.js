@@ -3,48 +3,12 @@ import 'izitoast/dist/css/iziToast.min.css';
 import errorIcon from '../img/svg/error.png';
 import successIcon from '../img/svg/circle.png';
 
-const delayInput = document.querySelector('.delay');
-const createBtn = document.querySelector('.create-btn');
+const createForm = document.querySelector('form');
 
-createBtn.addEventListener('click', event => {
+createForm.addEventListener('submit', event => {
   event.preventDefault();
-  const delay = delayInput.value;
+  const delay = event.currentTarget.elements.delay.value;
   const radioChecked = document.querySelector('input[name="state"]:checked');
-
-  // ==================== Перевірка вводу затримки ====================
-
-  if (!delayInput.value) {
-    izitoast.error({
-      title: 'Error',
-      message: 'Please enter a delay!',
-      position: 'topRight',
-      iconUrl: `${errorIcon}`,
-      backgroundColor: '#EF4040',
-      titleColor: '#fff',
-      messageColor: '#fff',
-      messageSize: '16px',
-      progressBarColor: '#FFBEBE',
-    });
-    return;
-  }
-
-  // ==================== Перевірка вибору стану ====================
-
-  if (!radioChecked) {
-    izitoast.error({
-      title: 'Error',
-      message: 'Please choose a state!',
-      position: 'topRight',
-      iconUrl: `${errorIcon}`,
-      backgroundColor: '#EF4040',
-      titleColor: '#fff',
-      messageColor: '#fff',
-      messageSize: '16px',
-      progressBarColor: '#FFBEBE',
-      close: false,
-    });
-    return;
-  }
 
   // ==================== Створення проміса ====================
 
@@ -89,4 +53,5 @@ createBtn.addEventListener('click', event => {
         });
       }, delay);
     });
+  createForm.reset();
 });
