@@ -2,6 +2,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import izitoast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import errorIcon from '../img/svg/error.png';
 
 let userSelectedDate;
 const buttonStart = document.querySelector('[data-start]');
@@ -29,7 +30,7 @@ const options = {
         title: 'Error',
         message: 'Please choose a date in the future',
         position: 'topRight',
-        iconUrl: `./img/svg/error.png`,
+        iconUrl: `${errorIcon}`,
         backgroundColor: '#EF4040',
         titleColor: '#fff',
         messageColor: '#fff',
