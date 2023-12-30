@@ -2,7 +2,7 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import izitoast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import errorIcon from '../img/svg/error.png';
+import errorIcon from '../img/svg/error.svg';
 
 let userSelectedDate;
 const buttonStart = document.querySelector('[data-start]');
